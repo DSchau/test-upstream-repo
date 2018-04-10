@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+node_js:
+- node
+- '6'
+- '5'
+- '4'
+install:
+- npm install
+after_success:
+- "./.travis/push.sh"
+deploy:
+  provider: npm
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key:
+    secure: HFTusGCrbUysdmG56GyXSyeSuT4n//x7u7PIIMnku4+pjXP+JIbnq7Vt649lrq3BfIPyYbti0s44SHGw72xVIpbwFQoIxW9NZ0BtWPV16Pvy+h/GVHv7Xagi7zY6Avvr0GqhMN+rLIPPTvqPNB4SpJ69DeT4I3EmvzbcWzQhsNXYIs95Wi0zezSZw255c0JLU7Gd3vob8gr8v+wBhRPAaxWxi2TmwpKIbxFIM9JifF1KqZwULDma9GJHMcIasvrgZSdl22AdMY27TFyn63KoLiJ4TAora2RqMB5x4yHTVrT/qwhPJnFJk5TsqNAljdB+ySWj3+wdX/cZyEg+TmhifJGphcKmsV/OfqgCntHR2Zr9qm+1kxiG+gn6DeC4jdzIM7WIayYab6BitNWArWl84Fv85BemnKoVJIOBwZmqZfCgn+dnraIE3nwaZDF43k0C6aMg1ywwAtnJ7Q8EIkvh6lg5KoXegsWcfhk++dHX7RhPkMtBkwwBsdys+oV9ZeUl6r/rD67rhRly7mXVXC11bDrutyhs7lVF3f+4a6Ib5GLJOl3DVn3DppN9QfGgHrSpi5eMvFZ9RVGW8RJzhDlRl3PFMIjLLy9cX6mgfyGp0nKwyRHu185JmbwIrste2imeRPDgYmJRO2MW4kLAuwBbsP2IiL7l5fQSw+diLDf+GZ8=

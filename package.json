@@ -1,8 +1,11 @@
 {
-  "name": "test-upstream-repo",
+  "name": "@tmartensen/test-upstream-repo",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:DSchau/test-upstream-repo.git",
   "author": "Dustin Schau <dustin.schau@objectpartners.com> (https://dustinschau.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }
